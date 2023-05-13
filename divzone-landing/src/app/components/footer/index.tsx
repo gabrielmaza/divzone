@@ -1,4 +1,4 @@
-import Logo from "@/static/img/svg/logo_nav.svg";
+import Logo from "../../../../public/img/svg/logo_nav.svg";
 import HText from "@/app/shared/HText";
 import { ArrowTopRightOnSquareIcon, LinkIcon, PhoneIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
