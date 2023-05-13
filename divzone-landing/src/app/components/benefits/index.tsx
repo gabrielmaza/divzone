@@ -4,7 +4,7 @@ import HText from "@/app/shared/HText";
 import { BenefitType, SelectedPageEnum } from "@/app/shared/typesEnum";
 import { CheckCircleIcon, LifebuoyIcon, PlusCircleIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
-import BenefitsPageGraphic from "@/static/img/benefits_Page_graphic.png";
+import BenefitsPageGraphic from "@/static/img/benefits_page_graphic.png";
 import Benefit from './Benefit';
 import arrowRight from '@/static/img/svg/arrow.svg'
 
