@@ -1,11 +1,3 @@
-## Docs 👇
-
-**https://divzone-typescript-doc.vercel.app/docs/intro**
-
-## Support
-
-**help@div.zone**
-
 <p align="center">
   <img src="https://divzone-react-theme-docs.vercel.app/img/logo.svg" width="50" height="50" alt="Framer Motion Icon" />
 </p>
