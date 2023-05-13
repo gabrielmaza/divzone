@@ -2,14 +2,14 @@
 import { SelectedPageEnum } from "@/app/shared/typesEnum";
 import useMediaQuery from '@/app/hooks/useMediaQ';
 import ActionButton from '@/app/shared/ActionButton';
-import HomePageText from "@/static/img/svg/home_page_text.svg";
-import HomePageGraphic from "@/static/img/home_page_graphic.png";
+import HomePageText from "../../../../public/img/svg/home_page_text.svg";
+import HomePageGraphic from "../../../../public/img/home_page_graphic.png";
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { motion } from 'framer-motion';
 import HText from '@/app/shared/HText';
 import { ArrowRightIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
-import backgroundSparkles from '@/static/img/background_sparkles.png';
+import backgroundSparkles from '../../../../public/img/background_sparkles.png';
 
 type Props = {
     setSelectedPage: (value: SelectedPageEnum) => void;

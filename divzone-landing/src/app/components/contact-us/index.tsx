@@ -1,8 +1,8 @@
 import { useForm } from "react-hook-form";
 import { SelectedPageEnum } from "@/app/shared/typesEnum";
 import { motion } from "framer-motion";
-import ContactUsPageGraphic from "@/static/img/contact_us_page_graphic.png";
-import backgroundSparkles from "@/static/img/background_sparkles.png";
+import ContactUsPageGraphic from "../../../../public/img/contact_us_page_graphic.png";
+import backgroundSparkles from "../../../../public/img/background_sparkles.png";
 import HText from "@/app/shared/HText";
 import Image from "next/image";
 
