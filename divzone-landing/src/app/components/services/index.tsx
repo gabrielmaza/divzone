@@ -40,7 +40,7 @@ type Props = {
     setSelectedPage: (value: SelectedPageEnum) => void;
 };
 
-const Services = ({ setSelectedPage }: Props) => {
+export default function Services({ setSelectedPage }: Props) {
     return (
         <section id="services" className="w-full bg-gray-800 pt-24 pb-32">
             <motion.div
@@ -81,5 +81,3 @@ const Services = ({ setSelectedPage }: Props) => {
         </section>
     );
 };
-
-export default Services;

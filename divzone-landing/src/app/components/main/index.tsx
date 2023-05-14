@@ -1,10 +1,8 @@
 
 import { SelectedPageEnum } from "@/app/shared/typesEnum";
-import useMediaQuery from '@/app/hooks/useMediaQ';
 import ActionButton from '@/app/shared/ActionButton';
 import HomePageText from "../../../../public/img/svg/home_page_text.svg";
 import HomePageGraphic from "../../../../public/img/home_page_graphic.png";
-import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { motion } from 'framer-motion';
 import HText from '@/app/shared/HText';
 import { ArrowRightIcon } from '@heroicons/react/24/solid';
@@ -15,7 +13,7 @@ type Props = {
     setSelectedPage: (value: SelectedPageEnum) => void;
 }
 
-const Main = ({ setSelectedPage }: Props) => {
+export default function Main({ setSelectedPage }: Props) {
 
     return (
         <section
@@ -64,16 +62,14 @@ const Main = ({ setSelectedPage }: Props) => {
                             visible: { opacity: 1, x: 0 }
                         }}
                     >
-                        <ActionButton setSelectedPage={setSelectedPage}>
-                            Join Now
-                        </ActionButton>
-                        <AnchorLink
+                        <ActionButton label="Join Now" setSelectedPage={setSelectedPage} />
+                        <a
                             className='text-sm font-bold text-primary-100 underline hover:text-secondary-100 transition duration-500'
                             onClick={() => setSelectedPage(SelectedPageEnum.Benefits)}
                             href={`#${SelectedPageEnum.Benefits}`}
                         >
                             Learn More
-                        </AnchorLink>
+                        </a>
                     </motion.div>
                 </div>
                 {/* Image */}
@@ -132,5 +128,3 @@ const Main = ({ setSelectedPage }: Props) => {
         </section>
     )
 }
-
-export default Main;

@@ -40,7 +40,7 @@ type Props = {
     setSelectedPage: (value: SelectedPageEnum) => void;
 }
 
-const index = ({ setSelectedPage }: Props) => {
+export default function index({ setSelectedPage }: Props) {
     return (
         <section
             id="benefits"
@@ -139,9 +139,7 @@ const index = ({ setSelectedPage }: Props) => {
 
                         {/* BUTTON */}
                         <div className="relative mt-16 z-10">
-                            <ActionButton setSelectedPage={setSelectedPage}>
-                                Join Now
-                            </ActionButton>
+                            <ActionButton label='Join Now' setSelectedPage={setSelectedPage} />
                         </div>
                     </div>
                 </div>
@@ -149,5 +147,3 @@ const index = ({ setSelectedPage }: Props) => {
         </section>
     )
 }
-
-export default index;
