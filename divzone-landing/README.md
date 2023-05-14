@@ -3,7 +3,7 @@
 </p>
 <h1 align="center">DivZone</h1>
 <h3 align="center">
-    React, Vite, Typescript and Tailwind css themes.
+    Multipurpose React themes
 </h3>
 <h3 align="center">
 Experience revolutionary web templates with the latest design standards, cutting-edge technology, and unmatched performance.
