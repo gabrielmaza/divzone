@@ -22,7 +22,6 @@ export default function Home() {
       if (window.scrollY !== 0) setIsTopOfPage(false)
     }
     window.addEventListener("scroll", handleScroll)
-    // return () => removeEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
