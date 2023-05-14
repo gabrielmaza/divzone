@@ -1,11 +1,11 @@
 import { useState } from "react"
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import Logo from "../../../../public/img/svg/logo_nav.svg";
-import Link from "./Link";
 import { SelectedPageEnum } from "@/app/shared/typesEnum";
 import useMediaQuery from "@/app/hooks/useMediaQ";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import MyLink from "./MyLink";
 
 type IndexProps = {
   isTopOfPage: boolean;
@@ -13,12 +13,12 @@ type IndexProps = {
   setSelectedPage: (value: SelectedPageEnum) => void;
 }
 
-const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: IndexProps) => {
+export default function Navbar({ isTopOfPage, selectedPage, setSelectedPage }: IndexProps) {
   const flexBetween = "flex items-center justify-between"
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)")
   const navbarBackground = isTopOfPage ? "" : "bg-gray-700 drop-shadow"
-  const hoverLinkColor = isTopOfPage ? "hover:text-secondary-300" : "hover:text-secondary-100"
+  const hoverMyLinkColor = isTopOfPage ? "hover:text-secondary-300" : "hover:text-secondary-100"
   return (
     <nav>
       <div className={`${navbarBackground} ${flexBetween} fixed top-0 z-50 w-full py-6`}>
@@ -30,13 +30,13 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: IndexProps) => {
             {isAboveMediumScreens ? (
               <div className={`${flexBetween} w-full`}>
                 <div className={`${flexBetween} gap-8 text-sm`}>
-                  <Link selectedPage={selectedPage} setSelectedPage={setSelectedPage} page="Home" />
-                  <Link selectedPage={selectedPage} setSelectedPage={setSelectedPage} page="Benefits" />
-                  <Link selectedPage={selectedPage} setSelectedPage={setSelectedPage} page="Services" />
-                  <Link selectedPage={selectedPage} setSelectedPage={setSelectedPage} page="Contact Us" />
+                  <MyLink selectedPage={selectedPage} setSelectedPage={setSelectedPage} page="Home" />
+                  <MyLink selectedPage={selectedPage} setSelectedPage={setSelectedPage} page="Benefits" />
+                  <MyLink selectedPage={selectedPage} setSelectedPage={setSelectedPage} page="Services" />
+                  <MyLink selectedPage={selectedPage} setSelectedPage={setSelectedPage} page="Contact Us" />
                 </div>
                 <div className={`${flexBetween} gap-8`}>
-                  <a href="#" title="Sign in link" className={`transition duration-500 hover:text-gray-600`}>Sign In</a>
+                  <a href="#" title="Sign in MyLink" className={`transition duration-500 hover:text-gray-600`}>Sign In</a>
                   <a href="#" className="rounded-md bg-transparent border-solid border border-white px-6 py-2 cursor-pointer transition duration-500 hover:bg-gray-800">
                     <span className="inline-block">Become a member</span>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 186.02 147.93"
@@ -47,7 +47,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: IndexProps) => {
                         <path className="fill-white" d="m95.85,63.3s.01.06,0,.08c0,.23-.01.46-.04.68-.01.21-.04.42-.09.63-.02.1-.04.2-.07.3-.02.12-.05.24-.09.35,0,.04-.01.07-.03.09t-.01.02c-.09.27-.19.54-.3.8-.18.38-.39.75-.63,1.1-.06.12-.14.23-.25.34-.09.11-.18.22-.27.32-.07.11-.17.21-.27.31l-.11.11-40.69,40.68c-1.37,1.37-3.17,2.06-4.98,2.06s-3.61-.69-4.98-2.06c-2.74-2.74-2.74-7.23,0-9.97l28.75-28.75H7.05c-3.87,0-7.05-3.17-7.05-7.05,0-1.93.79-3.69,2.07-4.97,1.28-1.28,3.04-2.07,4.98-2.07h64.75l-28.76-28.76c-2.74-2.74-2.74-7.22,0-9.97,1.37-1.37,3.17-2.06,4.98-2.06s3.61.69,4.98,2.06l40.8,40.8c.21.21.4.43.58.65.1.12.19.24.27.37.07.1.37.65.45.82.03.05.06.11.09.17.03.07.06.14.09.22.01.03.03.07.05.11.02.03.03.06.04.1.02.04.03.08.04.12.05.11.3.99.31,1.06.05.21.08.42.09.63.03.23.04.45.04.68Z" /></g>
                     </svg>
                   </a>
-                  <a href="https://divzone-typescript-doc.vercel.app/docs/intro" target="_blank" title="Documentation link" className={`transition duration-500 hover:text-gray-600`}>Docs</a>
+                  <a href="https://divzone-typescript-doc.vercel.app/docs/intro" target="_blank" title="Documentation MyLink" className={`transition duration-500 hover:text-gray-600`}>Docs</a>
                 </div>
               </div>
             ) :
@@ -107,14 +107,14 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: IndexProps) => {
             }
             }
           >
-            <Link selectedPage={selectedPage} setSelectedPage={setSelectedPage} page="Home" />
-            <Link selectedPage={selectedPage} setSelectedPage={setSelectedPage} page="Benefits" />
-            <Link selectedPage={selectedPage} setSelectedPage={setSelectedPage} page="Services" />
-            <Link selectedPage={selectedPage} setSelectedPage={setSelectedPage} page="Contact Us" />
+            <MyLink selectedPage={selectedPage} setSelectedPage={setSelectedPage} page="Home" />
+            <MyLink selectedPage={selectedPage} setSelectedPage={setSelectedPage} page="Benefits" />
+            <MyLink selectedPage={selectedPage} setSelectedPage={setSelectedPage} page="Services" />
+            <MyLink selectedPage={selectedPage} setSelectedPage={setSelectedPage} page="Contact Us" />
             <a href="https://divzone-typescript-doc.vercel.app/docs/intro" target="_blank" className="text-white transition duration-500 hover:text-gray-600 cursor-pointer">Docs</a>
             <hr />
             <div className="flex flex-col gap-8">
-              <a href="#" title="Sign in link" className={`transition duration-500 hover:text-gray-600`}>Sign In</a>
+              <a href="#" title="Sign in MyLink" className={`transition duration-500 hover:text-gray-600`}>Sign In</a>
               <a href="#" className="rounded-md bg-transparent border-solid border border-white px-6 py-2 cursor-pointer transition duration-500 hover:bg-gray-800">
                 <span className="text-lg inline-block">Become a member</span>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 186.02 147.93"
@@ -133,5 +133,3 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: IndexProps) => {
     </nav >
   )
 }
-
-export default Navbar;

@@ -1,6 +1,5 @@
 import { SelectedPageEnum } from "@/app/shared/typesEnum";
 import { motion } from "framer-motion";
-import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const childVariant = {
     hidden: { opacity: 0, scale: 0.9 },
@@ -14,7 +13,7 @@ type Props = {
     setSelectedPage: (value: SelectedPageEnum) => void;
 };
 
-const Benefit = ({ icon, title, description, setSelectedPage }: Props) => {
+export default function Benefit({ icon, title, description, setSelectedPage }: Props) {
     return (
         <motion.div
             variants={childVariant}
@@ -31,15 +30,13 @@ const Benefit = ({ icon, title, description, setSelectedPage }: Props) => {
 
             <h4 className="font-bold text-gray-950">{title}</h4>
             <p className="my-3 text-gray-950">{description}</p>
-            <AnchorLink
+            <a
                 className="text-sm font-bold underline"
                 onClick={() => setSelectedPage(SelectedPageEnum.ContactUs)}
                 href={`#${SelectedPageEnum.ContactUs}`}
             >
-                <a href="#" title="Benefit link" className="text-gray-800 hover:text-secondary-400 transition duration-500">Learn More</a>
-            </AnchorLink>
+                <span className="text-gray-800 hover:text-secondary-400 transition duration-500">Learn More</span>
+            </a>
         </motion.div>
     );
 };
-
-export default Benefit;

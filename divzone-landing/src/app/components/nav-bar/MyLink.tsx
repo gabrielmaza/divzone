@@ -1,6 +1,5 @@
 import { SelectedPageEnum } from "@/app/shared/typesEnum";
-import AnchorLink from "react-anchor-link-smooth-scroll";
-
+import Link from "next/link";
 
 type LinkProps = {
   page: string;
@@ -8,10 +7,10 @@ type LinkProps = {
   setSelectedPage: (value: SelectedPageEnum) => void;
 }
 
-const Link = ({ page, selectedPage, setSelectedPage }: LinkProps) => {
+export default function MyLink({ page, selectedPage, setSelectedPage }: LinkProps) {
   const lowerCasePage = page.toLowerCase().replace(/ /g, "") as SelectedPageEnum;
   return (
-    <AnchorLink
+    <Link
       className={`${selectedPage === lowerCasePage ? "text-secondary-100" : "text-white"}
     transition duration-500 hover:text-gray-600 cursor-pointer
     `}
@@ -19,7 +18,6 @@ const Link = ({ page, selectedPage, setSelectedPage }: LinkProps) => {
       onClick={() => setSelectedPage(lowerCasePage)}
     >
       {page}
-    </AnchorLink>
+    </Link>
   )
 }
-export default Link;
