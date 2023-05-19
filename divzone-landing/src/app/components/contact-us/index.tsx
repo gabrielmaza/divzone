@@ -28,7 +28,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
     };
 
     return (
-        <section id="contactus" className="mx-auto w-5/6 py-24">
+        <section id="contactus" className="mx-auto w-5/6 py-4 md:py-24">
             <motion.div
                 onViewportEnter={() => setSelectedPage(SelectedPageEnum.ContactUs)}
             >
