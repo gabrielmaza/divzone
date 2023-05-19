@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { SelectedPageEnum } from "@/app/shared/typesEnum";
 import { motion } from "framer-motion";
-import ContactUsPageGraphic from "../../../../public/img/contact_us_page_graphic.png";
+import ContactUsPageGraphic from "../../../../public/img/woman_smart.png";
 import backgroundSparkles from "../../../../public/img/background_sparkles.png";
 import HText from "@/app/shared/HText";
 import Image from "next/image";
@@ -45,19 +45,17 @@ export default function ContactUs({ setSelectedPage }: Props) {
                     }}
                 >
                     <HText>
-                        <span className="text-primary-100">GOT A QUESTION? </span> CONTACT US NOW!
+                        <span className="text-primary-100">NEED ANSWERS? </span>REACH OUT TO US TODAY!
                     </HText>
                     <p className="my-5">
-                        Congue adipiscing risus commodo placerat. Tellus et in feugiat nisl
-                        sapien vel rhoncus. Placerat at in enim pellentesque. Nulla
-                        adipiscing leo egestas nisi elit risus sit. Nunc cursus sagittis.
+                        Get in Touch and Let&#39;s Build Something Amazing Together!
                     </p>
                 </motion.div>
 
                 {/* FORM AND IMAGE */}
                 <div className="mt-10 justify-between gap-8 md:flex">
                     <motion.div
-                        className="mt-10 basis-3/5 md:mt-0 relative z-10"
+                        className="mt-10 basis-3/6 md:mt-0 relative z-10"
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.5 }}
@@ -134,7 +132,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
                     </motion.div>
 
                     <motion.div
-                        className="relative mt-16 basis-2/5 md:mt-0"
+                        className="relative mt-16 basis-3/6 md:mt-0"
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.5 }}

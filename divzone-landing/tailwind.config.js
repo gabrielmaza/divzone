@@ -8,6 +8,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        "gray-200": "#ded6f2",
         "gray-600": "#a299b9",
         "gray-700": "#433E4F",
         "gray-800": "#322E3C",
@@ -33,6 +34,9 @@ module.exports = {
       xs: "480px",
       sm: "768px",
       md: "1060px",
+      lg: "1200px",
+      xl: "1600px",
+      xxl: "1920px",
     },
   },
   plugins: [],
