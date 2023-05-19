@@ -142,7 +142,11 @@ export default function ContactUs({ setSelectedPage }: Props) {
                             visible: { opacity: 1, y: 0 },
                         }}
                     >
-                        <Image className="w-full absolute bottom-20 right-10 z-[0]" alt="background sparkles img" src={backgroundSparkles} />
+                        <Image
+                            className="w-full absolute bottom-20 right-10 z-[0]"
+                            alt="background sparkles img"
+                            src={backgroundSparkles}
+                        />
                         <div className="w-full relative">
                             <Image
                                 className="w-full relative z-10"
