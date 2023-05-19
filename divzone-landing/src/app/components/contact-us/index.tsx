@@ -68,7 +68,7 @@ export default function ContactUs({ setSelectedPage }: Props) {
                         <form
                             target="_blank"
                             onSubmit={onSubmit}
-                            action="https://formsubmit.co/your@email.com"
+                            action="https://formsubmit.co/gabrielmaza88@gmail.com"
                             method="POST"
                         >
                             {errors.name && (
