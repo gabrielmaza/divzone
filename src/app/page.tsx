@@ -26,7 +26,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="bg-gray-950 max-w-[1600px] mx-auto">
+    <div className="bg-gray-900 max-w-[1600px] mx-auto">
       <Navbar
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
