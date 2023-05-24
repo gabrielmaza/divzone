@@ -5,11 +5,11 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-950 py-16">
+    <footer className="bg-gray-900 py-16">
       <div className="justify-content mx-auto w-5/6 gap-16 md:flex">
         <div className="mt-16 basis-1/2 md:mt-0">
           <Image alt="logo" src={Logo} className="h-5 w-auto" />
-          <p className="my-5 text-gray-600">
+          <p className="my-5 text-gray-200">
             Transforming your digital vision into a reality through innovative
             solutions.
           </p>

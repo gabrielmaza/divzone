@@ -3,7 +3,7 @@ import Script from "next/script";
 
 // ID: G-N1ZXFJ8PDG;
 
-const GoogleAnalytics = ({ GA_TRACKING_ID }: { GA_TRACKING_ID: string }) => {
+const GoogleAnalytics = ({ GA_TRACKING_ID }: { GA_TRACKING_ID: any }) => {
   return (
     <>
       {/* Global site tag (gtag.js) - Google Analytics */}

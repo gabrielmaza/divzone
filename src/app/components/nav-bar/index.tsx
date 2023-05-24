@@ -58,7 +58,7 @@ export default function Navbar({
                     href="https://divzone-react-theme-docs.vercel.app/docs/intro"
                     target="_blank"
                     title="Docs link"
-                    className={`transition duration-500 hover:text-gray-600`}
+                    className={`transition duration-500 hover:text-primary-100`}
                   >
                     Docs
                   </a>
@@ -163,13 +163,13 @@ export default function Navbar({
               <a
                 href="https://divzone-react-theme-docs.vercel.app/docs/intro"
                 title="Sign in MyLink"
-                className={`transition duration-500 hover:text-gray-600`}
+                className={`transition duration-500 hover:text-primary-100`}
               >
                 Docs
               </a>
               <a
                 href="https://github.com/gabrielmaza/divzone-nextjs-theme"
-                className="rounded-md bg-transparent border-solid border border-white px-6 py-2 cursor-pointer transition duration-500 hover:bg-gray-800 text-center"
+                className="rounded-md bg-transparent border-solid border border-white px-6 py-2 cursor-pointer transition duration-500 hover:bg-gray-700 text-center"
               >
                 <span className="text-lg inline-block">GitHub</span>
                 <svg

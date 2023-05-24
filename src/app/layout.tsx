@@ -1,8 +1,8 @@
-import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react";
 import Head from "next/head";
 import "./globals.css";
 import { Inter } from "next/font/google";
-import GoogleAnalytics from "../../pages/GoogleAnalytics";
+import GoogleAnalytics from "../utils/GoogleAnalytics";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,7 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <GoogleAnalytics GA_TRACKING_ID="G-N1ZXFJ8PDG" />
+        <GoogleAnalytics
+          GA_TRACKING_ID={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}
+        />
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords} />
@@ -42,10 +44,11 @@ export default function RootLayout({
         <meta property="og:locale" content={metadata.ogLocale} />
       </Head>
       <body
-        className={`bg-gray-950 ${inter.className}`}
+        className={`bg-gray-900 ${inter.className}`}
         style={{ scrollBehavior: "smooth" }}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
