@@ -1,6 +1,8 @@
+import Script from "next/script";
 import Head from "next/head";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import GoogleAnalytics from "../../pages/GoogleAnalytics";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
+        <GoogleAnalytics GA_TRACKING_ID="G-N1ZXFJ8PDG" />
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords} />
@@ -38,6 +41,10 @@ export default function RootLayout({
         <meta property="og:site_name" content={metadata.ogName} />
         <meta property="og:locale" content={metadata.ogLocale} />
       </Head>
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-N1ZXFJ8PDG"
+      />
       <body
         className={`bg-gray-950 ${inter.className}`}
         style={{ scrollBehavior: "smooth" }}
