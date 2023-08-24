@@ -22,7 +22,7 @@ export default function Benefit({
   return (
     <motion.div
       variants={childVariant}
-      className="relative md:w-1/3 h-fit md:h-[400px] lg:h-[360px] z-0 mt-5 rounded-3xl bg-gray-200 px-5 py-10 text-center"
+      className="relative md:w-1/3 h-fit md:h-[400px] lg:h-[360px] z-0 mt-5 rounded-3xl bg-gray-100 px-5 py-10 text-center"
     >
       <div className="mb-4 flex justify-center">{icon}</div>
 
